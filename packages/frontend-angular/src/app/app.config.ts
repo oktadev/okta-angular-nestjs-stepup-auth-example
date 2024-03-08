@@ -6,6 +6,7 @@ import { OktaAuthModule } from '@okta/okta-angular';
 import { OktaAuth } from '@okta/okta-auth-js';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { authInterceptor } from './auth.interceptor';
+import { stepupInterceptor } from './stepup.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,7 +22,8 @@ export const appConfig: ApplicationConfig = {
       })
     ]),
     provideHttpClient(withInterceptors([
-      authInterceptor
+      authInterceptor,
+      stepupInterceptor
     ]))
   ]
 };
