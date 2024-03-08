@@ -1,0 +1,18 @@
+<div class="toolbar">
+  @if (isAuthenticated$ | async) {
+  <div>
+    <nav class="routes">
+      <a routerLink="/">Home</a>
+      <a routerLink="/profile">Profile</a>
+      <a routerLink="/messages">Messages</a>
+    </nav>
+  </div>
+  <a class="auth" (click)="signOut()">Sign out</a>
+  } @else {
+  <a class="auth" (click)="signIn()">Sign in</a>
+  }
+</div>
+
+<p>Learn more about Okta at <a href="https://developer.okta.com">developer.okta.com</a></p>
+
+<router-outlet></router-outlet>

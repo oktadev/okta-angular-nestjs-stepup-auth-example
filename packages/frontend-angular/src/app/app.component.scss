@@ -1,0 +1,38 @@
+:host {
+  font-family: sans-serif;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #095661;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.routes,
+.routes > a + a {
+  margin-left: 1rem;
+}
+
+.auth {
+  margin-left: 1rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 4px 8px;
+
+  &:hover {
+  background-color: #2d8c9e;
+  color: #fff;
+  }
+}
+
+p {
+  margin: 6rem;
+  text-align: center;
+  font-size: large;
+}
